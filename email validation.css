@@ -1,0 +1,79 @@
+/* Resetting default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the body */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #3a0170, #b001cb);
+    /* Uncomment the following lines to use Flexbox centering */
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    */
+}
+
+/* Styling the container */
+.container {
+    width: 400px;
+    background-color: #fff; /* Fixed color */
+    padding: 50px 30px;
+    position: absolute; /* Absolute positioning for centering */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering */
+    border-radius: 10px;
+    box-shadow: 25px 25px 30px rgba(0, 0, 0, 0.15);
+    color: #111; /* Fixed color value */
+    animation: containerAnimation 2s ease; /* Adding fade-in animation */
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes containerAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -10%); /* Slight offset at the start */
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%); /* Centered at the end */
+    }
+}
+
+label,
+input,
+#error-msg {
+    display:inline-block;
+    font-weight:500%;
+    margin-bottom:10px;
+}
+
+input[type="email"]{
+    display:inline-block;
+    border: 2px solid #d1d3d4;
+    width:88%;
+    border-radius: 5px;
+    outline:none;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    padding: 5px;
+}
+
+#icon {
+    float:right;
+    height:50px;
+    position: relative;
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+#error-msg{
+    display:none;
+    color:red;
+    font-size:14px;
+    margin-top: 10px;
+}

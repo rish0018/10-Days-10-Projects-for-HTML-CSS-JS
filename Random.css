@@ -1,0 +1,54 @@
+body {
+    margin-top:20% ;
+    padding:0;
+    display:flex;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items:center;
+    background: teal;
+    position:relative;
+    color:aliceblue;
+}
+
+.container{
+    text-align: center;
+}
+
+.number-container {
+    font-size:3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+        from{
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+}
+
+span {
+    font-size: 4rem;
+    padding: 1rem;
+    color: rgb(217, 78, 78);
+}
+
+
+button {
+    background-color:lightgreen;
+    color:whitesmoke;
+    padding: 1rem 2rem;
+    border:none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor:pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: brown;
+}

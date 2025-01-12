@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+    position: relative;
+}
+
+body.on {
+    background: radial-gradient(#555, #111);
+}
+
+.wire {
+    position: absolute;
+    left: 50%;
+    top:0%;
+
+    height: 60vh; /* Length of the wire */
+    width: 4px; /* Thickness of the wire */
+    background: #000;
+    z-index: 1;
+}
+
+.bulb {
+    position: absolute;
+    bottom: 50%; /* Align with the top of the wire */
+    top:52%;
+    left: 50.2%;
+    transform: translate(-50%, 50%); /* Perfect center alignment */
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+
+.bulb i {
+    font-size: 4rem;
+    color: #444;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg); /* Rotate the bulb */
+}
+
+.switch {
+    position: absolute;
+    top: 60px;
+    right: 100px;
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: gray 0px 10px 15px -5px;
+    cursor: pointer;
+}
+
+.switch i {
+    font-size: 1.5rem;
+}
+
+.on .bulb i {
+    color: yellow; /* Lit bulb color */
+}
+
+.on .switch {
+    color: lightgreen; /* Switch active color */
+}
